@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>HyperSpace</title>
+
+		<meta name="description" content="Distributed Bayesian optimization">
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+
+
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-asphalt-orange">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="69f5ef051240819434d9d8c7e9eeb2f5"><div class="sl-block" data-block-type="text" style="width: 806px; left: 80px; top: 210px; height: auto;" data-block-id="5658a9f9132d9cb2727eb4f5566821ad"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11; font-size: 120%;">
+<h1><span style="font-size:1.2em">HyperSpace</span></h1>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 130px; top: 420px;" data-block-id="376400ad2fc737e285731efb00b9902b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 120%;">
+<p><span style="font-size:1.2em">Distributed Bayesian Optimization</span></p>
+</div></div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; min-width: 1px; min-height: 1px; left: 240px; top: 382px;" data-block-id="ffa35ff12a2254496480c68f7e8edd66"><div class="sl-block-content" data-line-x1="-140" data-line-y1="131" data-line-x2="340" data-line-y2="131" data-line-color="#ffffff" data-line-start-type="none" data-line-end-type="none" style="z-index: 13;" data-line-style="solid" data-line-width="10px"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="480" height="1" viewbox="-140 131 480 1"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="-140" y1="131" x2="340" y2="131"></line><line stroke="#ffffff" stroke-width="10" x1="-140" y1="131" x2="340" y2="131"></line></svg></div></div></section><section data-id="3c4fae18a4b2910201f0e0f34333ac63">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 46px;" data-block-id="798afb46ce15086f1e7a85d6afee6230"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; font-size: 170%;">
+<p><span style="font-size:1.6em"><strong>Bayesian Optimization</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 400px; left: 0px; top: 182px;" data-block-id="3561a4b2e5aacdf568b4597e520df376"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="1200" data-natural-height="500" data-lazy-loaded="" data-src="hyperspace/d9786f0cf6ea717720162dc50e173d77.png"></div></div></section><section data-id="0f61123191a0a4dcd5726e1e1e53cb85"><div class="sl-block" data-block-type="math" style="width: auto; height: auto; min-width: 30px; min-height: 30px; left: 319px; top: 441px;" data-block-id="19ec9d3c1ef4bc6786e55f2af5e22ce0"><div class="sl-block-content notranslate" style="z-index: 11; font-size: 66%;">
+<div class="math-input">x_{n+1} = \arg\max_x \enskip u(x)</div>
+<div class="math-output"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi>arg</mi><mo>⁡</mo><msub><mi>max</mi><mo>⁡</mo><mi>x</mi></msub><mspace width="0.5em"></mspace><mi>u</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">x_{n+1} = \arg\max_x \enskip u(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.638891em; vertical-align: -0.208331em;"></span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathit mtight">n</span><span class="mbin mtight">+</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.208331em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mop">ar<span style="margin-right: 0.01389em;">g</span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mop"><span class="mop">max</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.151392em;"><span class="" style="top: -2.55em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathit mtight">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mspace" style="margin-right: 0.5em;"></span><span class="mord mathit">u</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span></div>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 640px; left: 160px; top: 0px;" data-block-id="fc28819f30d8f4fc43018d92565668b3"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.6em"><strong>Bayesian Optimization</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 70px;" data-block-id="a25c12775d0fab4a80c5dc48cf868d63"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left"><span style="font-size:0.9em"><span style="color:#DAA520"><strong>1.</strong></span> Sample a small, predefined number of, typically \(n=10\) points \(x_i\in X\), uniformly randomly, and compute the function values at those locations, \(f(x_1), \ldots, f(x_n)\).</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="7d7b2c0a85c42e7f9ce66d5c07a2f11a"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left"><span style="font-size:0.9em"><span style="color:#DAA520"><strong>2.</strong></span> We then model \(f\) by fitting a probabilistic model for the function. Here we assume that \(f\) is drawn from a Gaussian process.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 310px;" data-block-id="10a418faaa28eca44fbaa500d7932e4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:left"><span style="font-size:0.9em"><strong><span style="color:#DAA520">3.</span></strong> We then must decide where to sample our next point, \(x_{n+1}\), from \(X\) as we seek the location of the function's minimum. This is controlled by a proxy optimization of an acquisition function* \(u:X\rightarrow \mathbb{R^{+}}\):</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 505px;" data-block-id="6230065fb2ccb6c8f3743892398aaf51"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align:left"><span style="font-size:0.9em">The acquisition function balances two competing aims: the need to explore the domain of our objective function and the desire to exploit points on the domain which may be the global minimum of the function. By default, HyperSpace uses the Expected Improvement function, but there are several options available. </span></p>
+</div></div></section><section data-id="847389bd2d0afae10840fdfaa3ffafb6"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 8px;" data-block-id="4f28e70eabe1d49b53574410096b706c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:1.6em"><strong>Limitations of Bayesian Optimization</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 117px;" data-block-id="14cc6cf095461943ce4d52acbccb3e4e"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left"><span style="font-size:1.2em"><strong><span style="color:#DAA520">1.</span> Sequential by nature.</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 210px;" data-block-id="52dff668c8e64abdb914250db67c5071"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left"><span style="font-size:1.2em"><strong><span style="color:#DAA520">2. </span><span style="color:#FFFFFF">Exponential scaling.</span></strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 268px;" data-block-id="8edef847089e72f32733a344a2e38b41"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left">The number of samples required to bound our uncertainty about the optimization procedure is scales exponentially with the number of search dimensions, as in \(2^{D}\), where \(D\) is number of dimensions [1, 2]. This has been forgotten in the recent excitement of Bayesian optimization.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 867px; left: 0px; top: 490px;" data-block-id="88cd3594d9501af89a891b458ff4197c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:left"><span style="font-size:1.2em"><strong><span style="color:#DAA520">3.</span> Random search remains competitive.</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 880px; left: 80px; top: 544px;" data-block-id="de42c3933fe8375a40fb90dce400515d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align:left">Recent work by Li et al has shown that random search is still a contender in this space [3]. This is suspected to be tied to point <span style="color:#DAA520">2.</span><span style="color:#FFFFFF"> The curse of dimensionality isn't called the common cold of dimensionality, after all.</span></p>
+</div></div></section><section data-id="418a7fd29945d8c78463719113fbbc07"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="aeea876cfb4564014d24499642623081"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:1.8em"><strong>HyperSpace Approach</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 171px;" data-block-id="8fb9bc44c41e012f4810d9e418b5b34f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left"><span style="font-size:1.4em"><strong><span style="color:#DAA520">1.</span> Parallelism that focuses on the search space.</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 365px;" data-block-id="907c8d2b4d73a8a52438817058460da5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left"><span style="font-size:1.4em"><strong><span style="color:#DAA520">2.</span> Build many surrogate functions in parallel.</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 505px;" data-block-id="c3406d78ab6d55c4bab3e29cf04b9599"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left"><span style="font-size:1.4em"><strong><span style="color:#DAA520">3.</span> Prayer.</strong></span></p>
+</div></div></section><section data-id="49c12773508a874c407b4b6da6945eb3"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 338px; left: 0px; top: 0px;" data-block-id="42fe4a0014872d1d51944173bfa804d6"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;">
+<p><span style="font-size:1.6em"><strong>Paritioning </strong></span></p>
+
+<p><span style="font-size:1.6em"><strong>the </strong></span></p>
+
+<p><span style="font-size:1.6em"><strong>search </strong></span></p>
+
+<p><span style="font-size:1.6em"><strong>space</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 622px; height: 700px; left: 338px; top: 0px;" data-block-id="486d78ec3a4514fe4bbea62c6e68afe5"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="947" data-natural-height="1066" data-lazy-loaded="" data-src="hyperspace/91f378e11441bd0882ec0e7f0b99aa7f.png"></div></div></section><section data-id="caaa6a25b5e5762e20d81821742ebefb"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 610px; height: 590px; left: 175px; top: 110px;" data-block-id="7c911f146b993735744f89e038d4e25e"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="538" data-natural-height="520" data-lazy-loaded="" data-src="hyperspace/8e3c3758aa44da2aa96fd3c923d0663b.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 800px; left: 80px; top: 0px;" data-block-id="d1a2f21bb401a55e1b930e4f212a9c43"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.8em"><strong>Partitioning the Search Space</strong></span></p>
+</div></div></section><section data-id="39286daa7e73144477abc3c57fdaba4f" data-background-color="#ffffff">
+
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 778px; height: 700px; left: 91px; top: 0px;" data-block-id="77933507225b8c4cb016b923ad4f1dc1"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1000" data-natural-height="900" data-lazy-loaded="" data-src="hyperspace/d80c6ea6cd74db538a40af7265601331.gif"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 180px; top: 39px;" data-block-id="23a867e3682269edccdf520e9c96228c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.6em"><strong>Styblinski-Tang Function</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 719px; left: 131px; top: 39px;" data-block-id="ab87b5ccfdeee56a332579abc4356d21"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13; color: rgb(0, 0, 0);">
+<p><span style="font-size:1.8em"><strong>Styblinski-Tang Function</strong></span></p>
+</div></div></section><section data-id="e70ef55595f7afd0d78e142c00eb74ba"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 538px; height: 520px; left: 213px; top: 140px;" data-block-id="4b6675ed8c67e9dcf20e2aee3ca6457f"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="538" data-natural-height="520" data-lazy-loaded="" data-src="hyperspace/d158f41934f29a0facacac2aa78ff1da.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 8px;" data-block-id="426deda04e088631ec00338834977f75"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p><span style="font-size:1.8em"><strong>Styblinski-Tang Function</strong></span></p>
+</div></div></section><section data-id="ac600c8de0fda8152a40570a10600299">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 130px; top: 0px;" data-block-id="25b1c5c9791f07fb9f25779d328911b1"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="color:#FFFFFF"><span style="font-size:1.8em"><strong>Random Search</strong></span></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 700px; height: 700px; left: 130px; top: 0px;" data-block-id="6ac95d48879743dc565445f8fc6c8f4b"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="700" data-natural-height="700" data-lazy-loaded="" data-src="hyperspace/b58080b1ba09dde76c2baaf7d08c31f0.gif"></div></div></section><section data-id="4bd527603d68713510a294b89d0d2966">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 129px; top: 0px;" data-block-id="a9eb1219afdcd5b3b03ad07af09e5f91"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:1.8em"><strong>Bayesian Optimization</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 700px; height: 700px; left: 129px; top: 0px;" data-block-id="d06688acf7e6645768b22cfad0bcaa3b"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="700" data-natural-height="700" data-lazy-loaded="" data-src="hyperspace/465de6db6136c98ecf03b3aff7d36f2d.gif"></div></div></section><section data-id="77628ef4de4353482af118c4085fddc7">
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 700px; left: 130px; top: 0px;" data-block-id="32e321b14e4a46d1bdbea13fa26072b0"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:1.8em"><strong>HyperSpace</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 700px; height: 700px; left: 130px; top: 0px;" data-block-id="8764fa838975483be5d0fe4666235fd1"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="700" data-natural-height="700" data-lazy-loaded="" data-src="hyperspace/0e82a505480fb961485cf161e87b95b5.gif"></div></div></section><section data-id="1aa1c3ebfa0ec8e6e8d16146249a082d"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 320px; height: 308px; left: 0px; top: 210px;" data-block-id="d550df62ca65036d5480f00db193d3cd"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="538" data-natural-height="518" data-lazy-loaded="" data-src="hyperspace/ee1cb3a3615f087ff0fcfa5367bfebdb.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 320px; height: 308px; left: 328px; top: 210px;" data-block-id="eb06141110ff5a4889c73384963f3890"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="538" data-natural-height="518" data-lazy-loaded="" data-src="hyperspace/cea944c3335538df61904e0059232d37.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 304px; height: 308px; left: 656px; top: 210px;" data-block-id="8205205db8574123ff5f90c0badc489d"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="512" data-natural-height="519" data-lazy-loaded="" data-src="hyperspace/3a04c6ef1924ba67d822429289bc76e4.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 0px; top: 163px;" data-block-id="9090dab8e248c9a93b84a17f40522e7c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p>Random Search</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 328px; left: 320px; top: 163px;" data-block-id="beeaf6c095381ca94e135826da9965c9"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p>Bayesian Optimization</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 286px; left: 665px; top: 163px;" data-block-id="62646d41344a3d0b84fe1e2a0bd32230"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p>HyperSpace</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="ab5bb677ca28811a5de6e35e025301a7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p><span style="font-size:1.8em"><strong>Sample Comparison</strong></span></p>
+</div></div></section><section data-id="d4220e1aad4f1b873e43149c2da422d4"><div class="sl-block" data-block-type="code" style="min-width: 30px; min-height: 30px; width: 559px; height: 700px; left: 201px; top: 0px;" data-block-id="956549a3c91d59e7c29cebee7cabb516"><div class="sl-block-style" style="z-index: 10;"><div class="sl-block-content notranslate" style="z-index: 10; border-style: solid; border-width: 5px; border-color: rgb(159, 197, 232); font-size: 80%;" data-highlight-theme="obsidian"><pre class="python"><code style="padding: 50px;"> from hyperspace import hyperdrive
+
+
+ def objective(params):
+     """
+     Objective function to be minimized.
+     """
+     param0, param1, param2 = params
+     model = Model(param0, param1, param3)
+
+     train_loss = train(model)
+     val_loss = validate(model)
+
+     return val_loss
+
+
+ def main():
+     hparams = [(2, 10),             # param0
+                (10.0**-2, 10.0**0), # param1
+                (1, 10)]             # param2
+
+     hyperdrive(objective=objective,
+                hyperparameters=hparams,
+                results_path='/path/to/save/results',
+                model="GP",
+                n_iterations=15,
+                verbose=True,
+                random_state=0,
+                sampler="lhs",
+                n_samples=5,
+                checkpoints=True)
+
+
+ if __name__ == '__main__':
+     main()</code></pre></div></div></div></section><section data-id="70de42a7d52239492d6037348bacd593"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 179px; top: 0px;" data-block-id="c4891d6adf2b97a9942ed8066c4f798d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><span style="font-size:1.8em"><strong>References</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 93px;" data-block-id="d2142798546ae7a330ec6c67681f90cd"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left"><span style="color:#DAA520"><strong>1. </strong></span>N. Srinivas, A. Krause, S. M. Kakade, and M. W. Seeger. Gaussian process bandits without regret: An experimental design approach. CoRR, abs/0912.3995, 2009.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 249px;" data-block-id="58859e733bb7bcdb5f1698b4d7c9fb5c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:left"><span style="color:#DAA520"><strong>2.</strong></span> S. Grunewalder, J.-Y. Audibert, M. Opper, and J. Shawe-</p>
+
+<p style="text-align:left">Taylor. Regret Bounds for Gaussian Process Bandit Problems. In AISTATS 2010 - Thirteenth International Conference on Artificial Intelligence and Statistics, volume 9, pages 273–280, Chia Laguna Resort, Sardinia, Italy, May 2010.</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 490px;" data-block-id="9c2b6bcfb4690324123081000bdf8d70"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left"><span style="color:#DAA520"><strong>3.</strong></span> Li, K. Jamieson, G. DeSalvo, A. Rostamizadeh, and A. Talwalkar. Hyperband: A novel bandit-based approach to hyperparameter optimization. In International Conference on Learning Representations (ICLR2017). CBLS, April 2017</p>
+</div></div></section><section data-id="bcb3fd291438d7f40b2fd1447192adb7"><div class="sl-block" data-block-type="text" style="width: 960px; left: 0px; top: 301px; height: auto;" data-block-id="8228997b50916d19c8c4092d6c476f36"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 10;">
+<h1>Supplemental Material</h1>
+</div></div></section><section data-id="00ab0dd177901966fd4261d54138dab3"><div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 0px; top: 0px;" data-block-id="ea87cb7d0e0f0f52ccb9c3526a5d7055"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<p><strong><span style="font-size:1.8em">Acquisition Functions</span></strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 101px;" data-block-id="0fc9761b50881d36ca9cb15e55bc043d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:left">Expected Improvement:</p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; min-width: 30px; min-height: 30px; left: 209px; top: 159px;" data-block-id="b2168fbff4ab0f138dced99d2a6ed6ad"><div class="sl-block-content notranslate" style="z-index: 13; font-size: 70%;">
+<div class="math-input">u_{EI}(x) = E \left[\max \left(0, \enskip f(x^{*})-f(x) \right) \right]
+</div>
+<div class="math-output"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>u</mi><mrow><mi>E</mi><mi>I</mi></mrow></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>E</mi><mrow><mo fence="true">[</mo><mi>max</mi><mo>⁡</mo><mrow><mo fence="true">(</mo><mn>0</mn><mo separator="true">,</mo><mspace width="0.5em"></mspace><mi>f</mi><mo>(</mo><msup><mi>x</mi><mo>∗</mo></msup><mo>)</mo><mo>−</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo fence="true">)</mo></mrow><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">u_{EI}(x) = E \left[\max \left(0, \enskip f(x^{*})-f(x) \right) \right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord"><span class="mord mathit">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span style="margin-right: 0.05764em;" class="mord mathit mtight">E</span><span style="margin-right: 0.07847em;" class="mord mathit mtight">I</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span style="margin-right: 0.05764em;" class="mord mathit">E</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="minner"><span class="mopen delimcenter" style="top: 0em;">[</span><span class="mop">max</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="minner"><span class="mopen delimcenter" style="top: 0em;">(</span><span class="mord">0</span><span class="mpunct">,</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="mspace" style="margin-right: 0.5em;"></span><span style="margin-right: 0.10764em;" class="mord mathit">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.688696em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∗</span></span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span><span style="margin-right: 0.10764em;" class="mord mathit">f</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mclose delimcenter" style="top: 0em;">)</span></span><span class="mclose delimcenter" style="top: 0em;">]</span></span></span></span></span></div>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 960px; left: 1px; top: 244px;" data-block-id="881ca34d9967aa3f8960f8648265278f"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:left"><span style="font-size:0.9em">where </span><span style="font-size:0.9em">\(f(x^{*})\) is the minimal observed value of \(f\) thus far and \(E[\cdot]\) denotes expectation over the random variable \(f(x)\). We therefore receive a reward equal to the "improvement" \(f(x^{*}) - f(x)\) when \(f(x)\) is less than \(f(x^{*})\), and no reward otherwise.  Given the GP's predictive mean and variance functions, the right hand side of the above equation can be re-expressed as</span></p>
+</div></div>
+<div class="sl-block" data-block-type="math" style="width: auto; height: auto; min-width: 30px; min-height: 30px; left: 195px; top: 490px;" data-block-id="6862d54d6609fdcbcea1dac09fe27692"><div class="sl-block-content notranslate" style="z-index: 15; font-size: 70%;">
+<div class="math-input">u_{EI}(x) = (f(x^*)-\mu(x)) \Phi \left( Z\right) + \phi(Z)</div>
+<div class="math-output"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>u</mi><mrow><mi>E</mi><mi>I</mi></mrow></msub><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mo>(</mo><mi>f</mi><mo>(</mo><msup><mi>x</mi><mo>∗</mo></msup><mo>)</mo><mo>−</mo><mi>μ</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>)</mo><mi mathvariant="normal">Φ</mi><mrow><mo fence="true">(</mo><mi>Z</mi><mo fence="true">)</mo></mrow><mo>+</mo><mi>ϕ</mi><mo>(</mo><mi>Z</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">u_{EI}(x) = (f(x^*)-\mu(x)) \Phi \left( Z\right) + \phi(Z)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord"><span class="mord mathit">u</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.328331em;"><span class="" style="top: -2.55em; margin-left: 0em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span style="margin-right: 0.05764em;" class="mord mathit mtight">E</span><span style="margin-right: 0.07847em;" class="mord mathit mtight">I</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span class=""></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mopen">(</span><span style="margin-right: 0.10764em;" class="mord mathit">f</span><span class="mopen">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height: 0.688696em;"><span class="" style="top: -3.063em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mbin mtight">∗</span></span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathit">μ</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mclose">)</span><span class="mord">Φ</span><span class="mspace" style="margin-right: 0.166667em;"></span><span class="minner"><span class="mopen delimcenter" style="top: 0em;">(</span><span style="margin-right: 0.07153em;" class="mord mathit">Z</span><span class="mclose delimcenter" style="top: 0em;">)</span></span><span class="mspace" style="margin-right: 0.222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right: 0.222222em;"></span></span><span class="base"><span class="strut" style="height: 1em; vertical-align: -0.25em;"></span><span class="mord mathit">ϕ</span><span class="mopen">(</span><span style="margin-right: 0.07153em;" class="mord mathit">Z</span><span class="mclose">)</span></span></span></span></div>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 959px; left: 0px; top: 582px;" data-block-id="ac63d689548d510baf4e333a5d2e6eed"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align:left"><span style="font-size:0.9em">where \(\Phi\) is the standard normal cumulative distribution function, \(\phi\) is its derivative, and </span>\(Z = \frac{f(x^{*}) - \mu(x)}{\sigma(x)}\).</p>
+</div></div></section><section data-id="a1ab0aec588d1176c26e59838a852d8c"><div class="sl-block" data-block-type="image" style="min-width: 4px; min-height: 4px; width: 960px; height: 699px; left: 0px; top: 1px;" data-block-id="81912a857f8b7f42499868846278cac9"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="500" data-natural-height="364" data-lazy-loaded="" data-src="hyperspace/eba64cae20692f0cc21c68d9ba008987.gif"></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1329588,"slug":"hyperspace","title":"HyperSpace","description":"Distributed Bayesian optimization","width":960,"height":700,"visibility":"all","published_at":"2018-09-18T19:09:50.747Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/4b3cb73720f059979e88ab27498cf8c7/thumb.jpg?1537332305","view_count":2,"user":{"id":930027,"username":"toddyoung-1","name":"Todd Young","description":null,"thumbnail_url":"https://lh4.googleusercontent.com/-5-94ja9Ff5g/AAAAAAAAAAI/AAAAAAAAABk/SR2pALKIPRI/photo.jpg","paid":true,"pro":true,"lite":false,"team_id":null,"settings":{"id":1882448,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"fade","theme_id":null,"theme_font":"montserrat","theme_color":"asphalt-orange","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":false,"slide_count":18,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":1,"data_updated_at":1537406766012,"font_typekit":null,"font_google":null,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 960,
+				height: 700,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "fade",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+
+	</body>
+</html>
